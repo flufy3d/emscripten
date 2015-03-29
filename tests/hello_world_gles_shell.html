@@ -44,13 +44,12 @@
         setTimeout(function() {
           var secondImage = Module.canvas.toDataURL();
           reportResult(firstImage != secondImage);
-        }, 0);
+        }, 500);
       }
-      addEventListener("load", doTest, false);
+      Module.postRun = doTest;
 
-      // The compiled code
-      {{{ SCRIPT_CODE }}}
     </script>
+    {{{ SCRIPT }}}
   </body>
 </html>
 
